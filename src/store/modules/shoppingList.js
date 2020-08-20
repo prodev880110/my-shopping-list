@@ -9,7 +9,7 @@ export default {
     isLoading: false,
   },
   actions: {
-    getData({ state }) {
+    getDocs({ state }) {
       state.isLoading = true;
       db.collection('shopping_list').orderBy('department').onSnapshot((snapshot) => {
         state.list = snapshot.docs.map((doc) => ({
@@ -22,6 +22,10 @@ export default {
         }));
       });
       state.isLoading = false;
+    },
+    // eslint-disable-next-line no-unused-vars
+    saveDoc({ state }, payload) {
+      db.collection('shopping_list').add(payload);
     },
   },
 };

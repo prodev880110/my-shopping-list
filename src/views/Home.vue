@@ -21,11 +21,11 @@ export default {
   },
   methods: {
     ...mapActions('shoppingList', [
-      'getData',
+      'getDocs',
     ]),
   },
   mounted() {
-    this.getData();
+    this.getDocs();
   },
 };
 </script>

@@ -77,3 +77,45 @@ span.shoppingList__cardName__quantity {
   font-size: 17px;
   text-align: center;
 }
+
+form.addItemForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addItemForm__inputWrapper {
+  width: 90%;
+  padding: 10px;
+}
+
+.addItemForm__inputWrapper input,
+.addItemForm__inputWrapper select {
+  width: 100%;
+  height: 40px;
+  font-size: 19px;
+}
+
+.addItemForm__inputWrapper label {
+  font-size: 20px;
+  margin-bottom: 11px;
+  display: block;
+  font-weight: bold;
+}
+
+button.btnPrimary {
+  border: none;
+  background-color: #39f;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #39f;
+  transition: .3s all;
+  margin-top: 10px;
+}
+
+button.btnPrimary:hover {
+  background: transparent;
+  color: #000;
+}
