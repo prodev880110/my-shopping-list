@@ -1,4 +1,4 @@
-# client
+# my-shopping-list 🛒
 
 ## Project setup
 ```
