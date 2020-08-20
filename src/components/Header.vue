@@ -1,6 +1,6 @@
 <template>
-  <div class="app-header">
-    <div class="app-title">
+  <div class="appHeader">
+    <div class="addHeader__title">
       My Shopping List
     </div>
   </div>

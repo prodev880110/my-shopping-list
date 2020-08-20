@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
+:root {
+  --primary-bg-color: #39f;
+  --primary-text-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+
 }
 
-.app-header {
-  color: #fff;
-  background-color: #39f;
+.appHeader {
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
   text-align: center;
   padding: 15px 0;
   margin-bottom: 15px;
 }
 
-.app-title {
+.addHeader__title {
   font-size: 23px;
 }
 
-.tabs-nav {
+.tabsNav {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -27,17 +33,47 @@
   display: flex;
   align-items: center;
   padding: 15px;
-  background-color: #39f;
+  background-color: var(--primary-bg-color);
 }
 
-.tabs-nav .tab {
+.tabsNav__tab {
   flex: 1;
   text-align: center;
-  color: #fff;
+  color: var(--primary-text-color);
   text-decoration: none;
   font-size: 20px;
 }
 
 .router-link-exact-active {
   text-decoration: underline !important;
+}
+
+.shoppingList {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingList__card {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  padding: 20px;
+  margin: 10px;
+}
+
+.shoppingList__cardName {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.shoppingList__cardName__quantity {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.shoppingList__cardDepartment {
+  margin-top: 15px;
+  font-size: 17px;
+  text-align: center;
 }
