@@ -23,9 +23,18 @@ export default {
       });
       state.isLoading = false;
     },
-    // eslint-disable-next-line no-unused-vars
-    saveDoc({ state }, payload) {
+    saveDoc(_, payload) {
       db.collection('shopping_list').add(payload);
+    },
+    deleteDoc(_, itemId) {
+      db.collection('shopping_list').doc(itemId).delete();
+    },
+    editDoc(_, payload) {
+      db.collection('shopping_list').doc(payload.id).update({
+        name: payload.name,
+        quantity: Number(payload.quantity),
+        department: Number(payload.departmentKey),
+      });
     },
   },
 };

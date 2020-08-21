@@ -37,7 +37,7 @@ export default {
   data: () => ({
     shoppingItem: {
       name: '',
-      quantity: null,
+      quantity: '',
       department: null,
     },
     departments,
@@ -57,6 +57,10 @@ export default {
           department: Number(department),
         };
         this.saveDoc(temp);
+
+        this.shoppingItem.name = '';
+        this.shoppingItem.quantity = '';
+        this.shoppingItem.department = null;
         // console.log(temp);
       } else {
         console.log('Error');

@@ -34,6 +34,7 @@
   align-items: center;
   padding: 15px;
   background-color: var(--primary-bg-color);
+  border-top: 1px solid var(--primary-text-color);
 }
 
 .tabsNav__tab {
@@ -46,6 +47,10 @@
 
 .router-link-exact-active {
   text-decoration: underline !important;
+}
+
+.home {
+  margin-bottom: 65px;
 }
 
 .shoppingList {
@@ -94,6 +99,7 @@ form.addItemForm {
   width: 100%;
   height: 40px;
   font-size: 19px;
+  border: 1px solid #000;
 }
 
 .addItemForm__inputWrapper label {
@@ -105,17 +111,94 @@ form.addItemForm {
 
 button.btnPrimary {
   border: none;
-  background-color: #39f;
-  color: #fff;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
   padding: 10px 25px;
   font-size: 18px;
   text-align: center;
-  border: 1px solid #39f;
+  border: 1px solid var(--primary-bg-color);
   transition: .3s all;
   margin-top: 10px;
+}
+
+.shoppingList__actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
 }
 
 button.btnPrimary:hover {
   background: transparent;
   color: #000;
+}
+
+button.btnPrimary.delete {
+  background-color: #f0506e;
+  border: 1px solid #f0506e;
+}
+
+button.btnPrimary.edit {
+  background-color: #222;
+  border: 1px solid #222;
+  color: #fff;
+}
+
+.modalWrapper {
+  display: none;
+}
+
+.modalWrapper.open {
+  display: block;
+}
+
+.modalWrapper__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000ab;
+  z-index: 10000;
+}
+
+.modalWrapper_modal {
+  position: fixed;
+  z-index: 10010;
+  background: #fff;
+  top: 10%;
+  /* left: 50%; */
+  width: 100%;
+    /* margin: 20px 12px; */
+  padding: 20px;
+}
+
+.modalWrapper_modal .addItemForm__inputWrapper,
+.modalWrapper_modal .addItemForm__inputWrapper {
+  padding: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.modalWrapper_modal .addItemForm__inputWrapper input,
+.modalWrapper_modal .addItemForm__inputWrapper select {
+  height: 30px;
+  border: 1px solid #000;
+}
+
+.modalWrapper_modalForm>form .addItemForm__inputWrapper:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }

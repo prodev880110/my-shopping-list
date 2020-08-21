@@ -10,6 +10,10 @@
       <div class="shoppingList__cardDepartment">
         {{item.shoppingItem.department}}
       </div>
+      <div class="shoppingList__actions">
+        <button class="btnPrimary delete" @click="deleteDoc(item.id)">Cancella</button>
+        <button class="btnPrimary edit" @click="handleEdit(item)">Modifica</button>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +23,8 @@ export default {
   name: 'ShoppingList',
   props: {
     list: Array,
+    deleteDoc: Function,
+    handleEdit: Function,
   },
 };
 </script>
