@@ -53,6 +53,13 @@
   margin-bottom: 65px;
 }
 
+.empty {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .shoppingList {
   display: flex;
   flex-direction: column;
@@ -79,8 +86,9 @@ span.shoppingList__cardName__quantity {
 
 .shoppingList__cardDepartment {
   margin-top: 15px;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
+  font-style: italic;
 }
 
 form.addItemForm {

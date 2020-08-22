@@ -11,7 +11,7 @@ export default {
   actions: {
     getDocs({ state }) {
       state.isLoading = true;
-      db.collection('shopping_list').orderBy('department').onSnapshot((snapshot) => {
+      db.collection('shopping_list').orderBy('department', 'asc').onSnapshot((snapshot) => {
         state.list = snapshot.docs.map((doc) => ({
           id: doc.id,
           shoppingItem: {
@@ -23,18 +23,24 @@ export default {
       });
       state.isLoading = false;
     },
-    saveDoc(_, payload) {
+    saveDoc({ state }, payload) {
+      state.isLoading = true;
       db.collection('shopping_list').add(payload);
+      state.isLoading = false;
     },
-    deleteDoc(_, itemId) {
+    deleteDoc({ state }, itemId) {
+      state.isLoading = true;
       db.collection('shopping_list').doc(itemId).delete();
+      state.isLoading = false;
     },
-    editDoc(_, payload) {
+    editDoc({ state }, payload) {
+      state.isLoading = true;
       db.collection('shopping_list').doc(payload.id).update({
         name: payload.name,
         quantity: Number(payload.quantity),
         department: Number(payload.departmentKey),
       });
+      state.isLoading = false;
     },
   },
 };

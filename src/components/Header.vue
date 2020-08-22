@@ -1,7 +1,7 @@
 <template>
   <div class="appHeader">
     <div class="addHeader__title">
-      My Shopping List
+      🍕 My Shopping List 🍕
     </div>
   </div>
 </template>

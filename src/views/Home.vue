@@ -7,7 +7,10 @@
       :departments="departments"
       :fireEditDoc="fireEditDoc"
     />
-    <ShoppingList :list="list" :deleteDoc="deleteDoc" :handleEdit="handleEdit" />
+    <div class="empty" v-if="list.length === 0">
+      Nessun prodotto aggiunto 😵
+    </div>
+    <ShoppingList :list="list" :deleteDoc="deleteDoc" :handleEdit="handleEdit" v-else />
   </div>
 </template>
 
