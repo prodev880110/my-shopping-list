@@ -117,6 +117,12 @@ form.addItemForm {
   font-weight: bold;
 }
 
+.addItemForm__error {
+  margin-top: 10px;
+  color: red;
+}
+
+
 button.btnPrimary {
   border: none;
   background-color: var(--primary-bg-color);
