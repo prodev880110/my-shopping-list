@@ -16,10 +16,8 @@ This app was generated using the **Vue CLI**.
 
 You can clone this repository using __Git__:
 ```bash
-git clone https://github.com/dj0nny/my-shopping-list.git
+git clone https://github.com/prodev880110/my-shopping-list.git
 ```
-
-Or download the repository [here](https://github.com/dj0nny/my-shopping-list/archive/master.zip)
 
 ---
 You have to configure the firbase.js file for using all Firabase's functionalities: rename `firebase.example.js` to `firabase.js` and add the Firebase configuration object:
